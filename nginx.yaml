@@ -10,5 +10,4 @@
     ansible.builtin.service:
      name: niginx
      state: started
-     enabled: yes
   
