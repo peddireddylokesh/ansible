@@ -2,8 +2,8 @@
   hosts: local
   connection: local
   vars_files:
-    - all_vars.yaml
+  - all_vars.yaml
   tasks:
-    - name: print course info
+    - name: "print course info"
       ansible.builtin.file:
-      msg: "course is {{ course }}, duratiuon is  {{ duration }}, Trainer is {{ Trainer }},learner is {{ learner }}"
+        msg: "course is {{ course }}, duratiuon is  {{ duration }}, Trainer is {{ Trainer }},learner is {{ learner }}"
