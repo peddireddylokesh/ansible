@@ -5,5 +5,5 @@
   - all_vars.yaml
   tasks:
     - name: "print course info"
-      ansible.builtin.file:
+      ansible.builtin.debug:
         msg: "course is {{ course }}, duratiuon is  {{ duration }}, Trainer is {{ Trainer }},learner is {{ learner }}"
