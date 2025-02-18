@@ -1,6 +1,6 @@
 - name: install and run niginx
   hosts: web
-  become: yes
+  become: yes # -b "become is used to run the task as root user"
   tasks:
   - name: install nginx
     ansible.builtin.package:
