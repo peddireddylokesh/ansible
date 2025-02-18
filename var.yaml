@@ -13,5 +13,15 @@
       msg: "course is {{ course }}, duratiuon is  {{ duration }}, Trainer is {{ Trainer }}"
 
   - name: print the variables1
+    vars:
+      course: "python"
     ansible.builtin.debug:
       msg: "course is {{ course }}, duratiuon is  {{ duration }}, Trainer is {{ Trainer }}"
+
+  - name: print the variables2
+    ansible.builtin.debug:
+      msg: "course is {{ course }}, duratiuon is  {{ duration }}, Trainer is {{ Trainer }}"
+
+
+
+      
