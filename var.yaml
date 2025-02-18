@@ -4,6 +4,7 @@
   vars:
     course: devops
     duration: 120
+    trainer: "shivakumar"
   tasks:
   - name: print the variables
     ansible.builtin.debug:
