@@ -2,7 +2,6 @@
   hosts: local
   connection: local
   tasks: 
- 
-- name: "print the variables"
-  ansible.builtin.debug:
-    msg: "course is {{ course }}, duratiuon is  {{ duration }}, Trainer is {{ Trainer }}"
+  - name: "print the variables"
+    ansible.builtin.debug:
+      msg: "course is {{ course }}, duratiuon is  {{ duration }}, Trainer is {{ Trainer }}"
