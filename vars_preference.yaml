@@ -5,14 +5,14 @@
     greet: "hey hi im from playbook"
   vars_files:
     - all_vars.yaml
-  vars_prompt:
-    - name: greet
-      prompt: Enter the value
-      private: false
+  # vars_prompt:
+  #   - name: greet
+  #     prompt: Enter the value
+  #     private: false
   tasks:
     - name: print the variables
       vars:
-        greet: "hey hi im from task"
+        # greet: "hey hi im from task"
       ansible.builtin.debug:
         msg: "this is from {{ greet }}"
 
