@@ -4,11 +4,11 @@
   vars: # play level variables global variables
     greet: "hey hi im  from playbook"
   var_files:
-    - all_vars.yaml
+  - all_vars.yaml
   vars_prompt:
-    - name: "greet"
-      prompt: "Enter the value"
-      private: no
+  - name: "greet"
+    prompt: "Enter the value"
+    private: no
   tasks:
   - name: "print the variables"
     vars: 
