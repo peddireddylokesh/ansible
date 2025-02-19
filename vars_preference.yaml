@@ -5,12 +5,15 @@
     greet: "hey hi im  from playbook"
   vars_files:
   - all_vars.yaml
-  vars_prompt:
-    - name: greet
-      prompt: Enter the value
-      private: no
+  # vars_prompt:
+  #   - name: greet
+  #     prompt: Enter the value
+  #     private: no
   tasks:
-  - name: print the variables
-    ansible.builtin.debug:
-       msg: "this is from {{ greet }}"
+  # - name: print the variables
+  #   ansible.builtin.debug:
+  #      msg: "this is from {{ greet }}"
 # commnd line from args
+# prompt
+# task level -inside tasks-> highest priority
+
