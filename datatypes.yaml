@@ -9,8 +9,8 @@
       - aws
       - ansible
       - shell
-    live: true # boolean
-    tools: # dictionary
+    live: true # boolean true or false
+    tools: # { means its mapping }
       scm: git
       ci: jenkins
       cd: jenkins
