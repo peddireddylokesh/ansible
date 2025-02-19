@@ -9,10 +9,10 @@
   #   - name: greet
   #     prompt: Enter the value
   #     private: false
-  tasks:
-    - name: print the variables
-      ansible.builtin.debug:
-        msg: "this is from {{ greet }}"
+  # tasks:
+  #   - name: print the variables
+  #     ansible.builtin.debug:
+  #       msg: "this is from {{ greet }}"
 
 #1st priority is command-line arguments
 # 2nd priority is prompting the user to enter the value
