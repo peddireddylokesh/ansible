@@ -5,4 +5,4 @@
  
 - name: "print the variables"
   ansible.builtin.debug:
-      msg: "course is {{ course }}, duratiuon is  {{ duration }}, Trainer is {{ Trainer }}"
+    msg: "course is {{ course }}, duratiuon is  {{ duration }}, Trainer is {{ Trainer }}"
