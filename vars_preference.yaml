@@ -2,17 +2,17 @@
   hosts: local
   connection: local
   vars: # play level variables global variables
-    greet: "hey hi im  from playbook"
+    greet: "hey hi im from playbook"
   vars_files:
-  - all_vars.yaml
+    - all_vars.yaml
   vars_prompt:
     - name: greet
       prompt: Enter the value
       private: false
   tasks:
-  - name: print the variables
-    ansible.builtin.debug:
-       msg: "this is from {{ greet }}"
-# commnd line from args
+    - name: print the variables
+      ansible.builtin.debug:
+        msg: "this is from {{ greet }}"
+# command line from args
 
-# task level -inside tasks-> highest priority
+# task level - inside tasks -> highest priority
