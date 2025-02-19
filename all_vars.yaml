@@ -1,4 +1,5 @@
-# course: DevOps with aws
-# duration: 120
-# Trainer: "Shivakumar"
-# learner: "lokesh"
+course: DevOps with aws
+duration: 120
+Trainer: "Shivakumar"
+learner: "lokesh"
+greet: "Good Morning files"
