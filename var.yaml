@@ -1,10 +1,10 @@
 - name: variables
   hosts: local
   connection: local
-  vars: # play level variables global variables
-    course: devops with aws
-    duration: 120
-    Trainer: "shivakumar"
+  # vars: # play level variables global variables
+  #   course: devops with aws
+  #   duration: 120
+  #   Trainer: "shivakumar"
   tasks:
   - name: "print the variables"
     vars: #task level variables, access only in this task,task variables can override play variables
