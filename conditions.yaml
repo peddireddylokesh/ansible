@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars: 
-    value: 20
+    value: 5
   tasks: 
   - name: check the value
     ansible.builtin.debug:
