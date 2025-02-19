@@ -13,6 +13,6 @@
     - name: print the variables
       ansible.builtin.debug:
         msg: "this is from {{ greet }}"
-# command line from args
+# prompting the user to enter the value
 
 # task level - inside tasks -> highest priority
