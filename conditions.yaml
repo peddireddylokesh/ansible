@@ -1,26 +1,17 @@
 - name: check value is greater than 10 or not #practicing conditions
   hosts: local
   connection: local
-  vars: 
-    value: 5
-    factor: 2
+
   tasks: 
   - name: taking value from user
     pause:
       prompt: "Enter the value"
     register: input
-  - name: print the value
-    ansible.builtin.debug:
-      msg: "value is {{ input.user_input }}"
-      private: false
   - name: check the value
     ansible.builtin.debug:
       msg: "value is less than 10"
-    when: input.user_input | int <= 10
+    when: value <= 10
   - name: check the value
     ansible.builtin.debug:
       msg: "value is greater than 10"
-    when: input.user_input | int > 10
-  - name: multiply the value by factor
-    ansible.builtin.debug:
-      msg: "value multiplied by factor is {{ input.user_input | int * factor }}"
+    when: value > 10
