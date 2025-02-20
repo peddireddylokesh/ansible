@@ -3,11 +3,15 @@
   become: yes
   tasks: 
   - name: Installing nginx in RHEL
-  ansible.builtin.dnf:
-    name: nginx
-    state: installed
-  when: ansible_os_family == "RedHat"
+    ansible.builtin.dnf:
+      name: nginx
+      state: installed
+    when: ansible_os_family == "RedHat"
+
+  - name: Installing nginx in UBUNTU
+    ansible.builtin.apt:
+      name: nginx
+      state: installed
+    when: ansible_os_family == "Debian"
 
 
-
-  
