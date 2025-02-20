@@ -3,7 +3,7 @@
   become: yes
   tasks:
     - name: installing required packages
-      ansible.builtin.package:
+      ansible.builtin.dnf:
         name: "{{ item }}"
         state: installed
       loop:
@@ -11,8 +11,9 @@
         - gcc
         - zip
         - mysql
+      when: ansible_os_family == "RedHat""
     - name: installing required packages
-      ansible.builtin.package:
+      ansible.builtin.apt:
         name: "{{ item }}"
         state: installed
       loop:
@@ -20,3 +21,4 @@
         - gcc
         - zip
         - mysql
+      when: ansible_os_family == "Debian""
