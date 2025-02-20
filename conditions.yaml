@@ -7,9 +7,9 @@
     pause:
       prompt: "Enter the value"
     register: input
-  - name:
-    ansible.builtin.debug:
-      msg: "{{ input.user_input }}"
+  - name: converting the value to integer
+    set_fact:
+      value: "{{ input.user_input | int }}"
   - name: check the value
     ansible.builtin.debug:
       msg: "value is less than 10"
