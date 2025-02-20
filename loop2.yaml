@@ -1,21 +1,46 @@
-- name: install packages
+# - name: install packages
+#   hosts: web
+#   become: yes
+#   tasks:
+#     - name: installing required packages
+#       ansible.builtin.packages:
+#         name: "{{ item }}"
+#         state: installed
+#       loop:
+#         - git
+#         - gcc
+#         - zip
+#         - mysql
+#       when: ansible_os_family == "RedHat"
+#     - name: installing required packages
+#       ansible.builtin.packages:
+#         name: "{{ item }}"
+#         state: installed
+#       loop:
+#         - git
+#         - gcc
+#         - zip
+#         - mysql
+#       when: ansible_os_family == "Debian"
+- name: Install packages
   hosts: web
   become: yes
   tasks:
-    - name: installing required packages
-      ansible.builtin.packages:
+    - name: Install required packages on RHEL-based systems
+      ansible.builtin.package:
         name: "{{ item }}"
-        state: installed
+        state: present
       loop:
         - git
         - gcc
         - zip
         - mysql
-      when: ansible_os_family == "RedHat"
-    - name: installing required packages
-      ansible.builtin.packages:
+      when: ansible_os_family == "RedHat"  #  Fixed condition
+
+    - name: Install required packages on Debian-based systems
+      ansible.builtin.package:
         name: "{{ item }}"
-        state: installed
+        state: present
       loop:
         - git
         - gcc
