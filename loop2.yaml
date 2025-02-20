@@ -11,3 +11,12 @@
         - gcc
         - zip
         - mysql
+    - name: installing required packages
+      ansible.builtin.package:
+        name: "{{ item }}"
+        state: installed
+      loop:
+        - git
+        - gcc
+        - zip
+        - mysql
