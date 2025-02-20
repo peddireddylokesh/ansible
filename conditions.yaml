@@ -10,6 +10,9 @@
   - name: converting the value to integer
     set_fact:
       value: "{{ input.user_input | int }}"
+  - name: debug -show the value
+    ansible.builtin.debug:
+      msg: "value is {{ value }}"
   - name: check the value
     ansible.builtin.debug:
       msg: "value is less than 10"
