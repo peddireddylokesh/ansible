@@ -2,7 +2,7 @@
   hosts: web
   become: yes
   tasks:
-    - name: installing required packages
+    - name: install required packages
       ansible.builtin.packages:
         name: "{{ item }}"
         state: present
@@ -12,7 +12,8 @@
         - zip
         - mysql
       when: ansible_os_family == "RedHat"
-    - name: installing required packages
+      
+    - name: install required packages
       ansible.builtin.packages:
         name: "{{ item }}"
         state: present
