@@ -4,11 +4,15 @@
   vars: 
     value: 5
   tasks: 
-  - name: check the value
-    ansible.builtin.debug:
-      msg: "value is greater than 10"
-    when: -r prompt >= 10
+  - name: taking value from user
+    prompt:
+      prompt: "Enter the value"
+      private: false
   - name: check the value
     ansible.builtin.debug:
       msg: "value is less than 10"
     when: value <= 10
+  - name: check the value
+    ansible.builtin.debug:
+      msg: "value is greater than 10"
+    when: value > 10
