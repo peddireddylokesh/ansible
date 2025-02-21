@@ -5,8 +5,8 @@
   tasks:
     - name: install required packages on RedHat
       ansible.builtin.package:
-        name: "{{ packages }}"
-        state: present
+        name: "item"
+        state: installed
       loop:
       - git
       - gcc
