@@ -1,16 +1,14 @@
 - name: install packages
   hosts: web
-  become: yes
-     
+  become: yes  
   tasks:
     - name: install required packages on RedHat
       ansible.builtin.package:
-        name: "item"
+        name: "{{ item }}"
         state: installed
       loop:
       - git
       - gcc
       - zip
       - mysql
-      when: ansible_os_family == "RedHat"
 
