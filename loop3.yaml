@@ -1,0 +1,15 @@
+- name: install packages
+  hosts: web
+  become: yes
+  vars:
+    packages:
+      - { name: git  , state: present }
+      - { name: gcc  , state: present }
+      - { name: zip  , state: absent }
+      - { name: mysql  , state: present }
+  tasks:
+    - name: install required packages on RedHat
+      ansible.builtin.package:
+        name: "{{ packages.name }}"
+        state: "{{package.installed}}"
+      when: ansible_os_family == "RedHat"
