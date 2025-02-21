@@ -36,12 +36,18 @@
 
   - name: upper to lower
     vars: 
-      name: "lokesh"
+      name: "LOKESH"
     ansible.builtin.debug:
-      msg: "hello : {{ name | lower }}"
+      msg: "hello : {{ name | lower }}" # it converts upper case letters to lower case
 
   - name: lower to upper
     vars: 
       name: "lokesh"
     ansible.builtin.debug:
-      msg: "hello : {{ name | upper }}"
+      msg: "hello : {{ name | upper }}" # it converts lower case letters to upper case
+
+  - name: print min and max values
+    ansible.builtin.debug:
+      msg: "min is {{ numbers | min }} max is {{ numbers | max }}"
+    vars:
+      numbers: "{{ range(1,20) | list }}"
