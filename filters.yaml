@@ -10,7 +10,9 @@
     vars:
       fruits: "banana,mango,apple" #string
     ansible.builtin.debug:
-      msg: "Fruits are : {{ fruits.split(' , ') }}"
+      msg: 
+        - "fruits are : {{ fruits }}"
+        - "Fruits are : {{ fruits.split(' , ') }}"
 
 
   - name: convert map into list
@@ -37,3 +39,9 @@
       name: "lokesh"
     ansible.builtin.debug:
       msg: "hello : {{ name | lower }}"
+
+  - name: lower to upper
+    vars: 
+      name: "lokesh"
+    ansible.builtin.debug:
+      msg: "hello : {{ name | upper }}"
