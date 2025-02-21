@@ -51,3 +51,9 @@
       msg: "min is {{ numbers | min }} max is {{ numbers | max }}"
     vars:
       numbers: "{{ range(1,21) | list }}"
+
+  - name: check ip address is valid or not
+    vars: 
+      ip: "456.54.542.676"
+    ansible.builtin.debug:
+      msg: "{{ ip | ansible.utils.ipaddr }}"
