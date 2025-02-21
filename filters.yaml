@@ -8,6 +8,16 @@
 
   - name: convert string to list
     vars:
-      fruits: "banana,mango,apple"
+      fruits: "banana,mango,apple" #string
     ansible.builtin.debug:
-      msg: "this fruit name is {{ fruits }}"
+      msg: "Fruits are : {{ fruits.split(' , ') }}"
+
+
+  - name: convert map into list
+    vars: 
+      course:
+        name: ansible 
+        duration: 10hrs
+        learner: lokesh
+    ansible.builtin.debug:
+      msg: "courses are {{ course | dict2items }}"
