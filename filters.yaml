@@ -24,7 +24,7 @@
 
   - name: convert list into map
     ansible.builtin.debug:
-    msg: "couse info : {{ course | items2dict }}"
+     msg: "couse info : {{ course | items2dict }}"
     vars: 
       course:
       - {'key': 'name' , 'value': 'ansible'}
