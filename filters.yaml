@@ -50,4 +50,4 @@
     ansible.builtin.debug:
       msg: "min is {{ numbers | min }} max is {{ numbers | max }}"
     vars:
-      numbers: "{{ range(1,20) | list }}"
+      numbers: "{{ range(1,21) | list }}"
