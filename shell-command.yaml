@@ -8,7 +8,7 @@
 
     - name: executing ls command in command module
       #ansible.builtin.command: ls -ltr > /tmp/output.txt
-      ansible.buildin.command: ls -ltr # it doesnt have redirections like shell so it will work here.
+      ansible.builtin.command: ls -ltr # it doesnt have redirections like shell so it will work here.
       register: command_result
 
     - name: print the output
