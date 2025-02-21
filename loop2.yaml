@@ -9,13 +9,13 @@
       - mysql
   tasks:
     - name: install required packages on RedHat
-      ansible.builtin.packages:
+      ansible.builtin.package:
         name: "{{ packages }}"
         state: present
       when: ansible_os_family == "RedHat"
 
     - name: install required packages on Debian
-      ansible.builtin.packages:
+      ansible.builtin.package:
         name: "{{ packages }}"
         state: present
       when: ansible_os_family == "Debian"
