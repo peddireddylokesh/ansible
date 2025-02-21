@@ -1,21 +1,16 @@
 - name: install packages
   hosts: web
   become: yes
-  vars:
-    packages:
-      - git
-      - gcc
-      - zip
-      - mysql
+     
   tasks:
     - name: install required packages on RedHat
       ansible.builtin.package:
         name: "{{ packages }}"
         state: present
+      loop:
+      - git
+      - gcc
+      - zip
+      - mysql
       when: ansible_os_family == "RedHat"
 
-    - name: install required packages on Debian
-      ansible.builtin.package:
-        name: "{{ packages }}"
-        state: present
-      when: ansible_os_family == "Debian"
