@@ -1,0 +1,11 @@
+- name: Check installed packages
+  hosts: all
+  become: yes
+  gather_facts: yes
+  
+  tasks:
+    - name: Gather package facts
+      ansible.builtin.package_facts:
+        manager: auto  # Automatically detects the package manager (apt, yum, dnf, etc.)
+
+   
