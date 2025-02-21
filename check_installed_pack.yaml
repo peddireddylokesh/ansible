@@ -1,7 +1,6 @@
 - name: Check installed packages
-  hosts: all
+  hosts: local
   become: yes
-  gather_facts: yes
   
   tasks:
     - name: Gather package facts
