@@ -35,6 +35,8 @@
 
 
   - name: upper to lower
+    tags:
+    - upper to lower
     vars: 
       name: "LOKESH"
     ansible.builtin.debug:

@@ -1,0 +1,44 @@
+{
+
+    "changed": true,
+    "cmd": [
+        "ls",
+        "-ltr"
+    ],
+    "delta": "0:00:00.005477",
+    "end": "2025-02-21 11:30:28.166088",
+    "failed": false,
+    "msg": "",
+    "rc": 0,
+    "start": "2025-02-21 11:30:28.160611",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "total 128\n-rw-r--r-- 1 ec2-user ec2-user 37830 Feb 21 05:06 facts.json\n-rw-r--r-- 1 ec2-user ec2-user   602 Feb 21 05:06 datatypes.yaml\n-rw-r--r-- 1 ec2-user ec2-user   349 Feb 21 05:06 conditions2.yaml\n-rw-r--r-- 1 ec2-user ec2-user   437 Feb 21 05:06 conditions.yaml\n-rw-r--r-- 1 ec2-user ec2-user   214 Feb 21 05:06 args.yaml\n-rw-r--r-- 1 ec2-user ec2-user   105 Feb 21 05:06 all_vars.yaml\n-rw-r--r-- 1 ec2-user ec2-user   293 Feb 21 05:06 globalvars.yaml\n-rw-r--r-- 1 ec2-user ec2-user   139 Feb 21 05:06 facts.yaml\n-rw-r--r-- 1 ec2-user ec2-user   592 Feb 21 05:06 vars_preference.yaml\n-rw-r--r-- 1 ec2-user ec2-user   219 Feb 21 05:06 vars_inventory.yaml\n-rw-r--r-- 1 ec2-user ec2-user   794 Feb 21 05:06 var.yaml\n-rw-r--r-- 1 ec2-user ec2-user   582 Feb 21 05:06 prompt.yaml\n-rw-r--r-- 1 ec2-user ec2-user   129 Feb 21 05:06 playbook.yaml\n-rw-r--r-- 1 ec2-user ec2-user   318 Feb 21 05:06 nginx.yaml\n-rw-r--r-- 1 ec2-user ec2-user   356 Feb 21 05:06 multipleplay.yaml\n-rw-r--r-- 1 ec2-user ec2-user   198 Feb 21 05:06 loops.yaml\n-rw-r--r-- 1 ec2-user ec2-user   239 Feb 21 05:06 inventory-vars.yaml\n-rw-r--r-- 1 ec2-user ec2-user   132 Feb 21 05:06 helloworld.yaml\n-rw-r--r-- 1 ec2-user ec2-user   418 Feb 21 06:13 loop3.yaml\n-rw-r--r-- 1 ec2-user ec2-user   465 Feb 21 07:03 inventory.ini\n-rw-r--r-- 1 ec2-user ec2-user   257 Feb 21 07:06 loop2.yaml\n-rw-r--r-- 1 ec2-user ec2-user  1704 Feb 21 10:24 filters.yaml\n-rw-r--r-- 1 ec2-user ec2-user   578 Feb 21 11:30 shell-command.yaml",
+    "stdout_lines": [
+        "total 128",
+        "-rw-r--r-- 1 ec2-user ec2-user 37830 Feb 21 05:06 facts.json",
+        "-rw-r--r-- 1 ec2-user ec2-user   602 Feb 21 05:06 datatypes.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   349 Feb 21 05:06 conditions2.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   437 Feb 21 05:06 conditions.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   214 Feb 21 05:06 args.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   105 Feb 21 05:06 all_vars.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   293 Feb 21 05:06 globalvars.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   139 Feb 21 05:06 facts.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   592 Feb 21 05:06 vars_preference.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   219 Feb 21 05:06 vars_inventory.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   794 Feb 21 05:06 var.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   582 Feb 21 05:06 prompt.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   129 Feb 21 05:06 playbook.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   318 Feb 21 05:06 nginx.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   356 Feb 21 05:06 multipleplay.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   198 Feb 21 05:06 loops.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   239 Feb 21 05:06 inventory-vars.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   132 Feb 21 05:06 helloworld.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   418 Feb 21 06:13 loop3.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   465 Feb 21 07:03 inventory.ini",
+        "-rw-r--r-- 1 ec2-user ec2-user   257 Feb 21 07:06 loop2.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user  1704 Feb 21 10:24 filters.yaml",
+        "-rw-r--r-- 1 ec2-user ec2-user   578 Feb 21 11:30 shell-command.yaml"
+    ]
+
+}
