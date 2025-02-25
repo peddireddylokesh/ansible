@@ -52,3 +52,15 @@
       overwrite: true
     loop: "{{ ec2_info.results }}"
     when: item.instances | length > 0
+
+  - name: create public ip for frontend  
+    amazon.aws.route53:
+      state: present
+      zone: "{{ zone }}"
+      record: "{{ item.item }}.{{ zone }}"
+      type: A
+      ttl: 1
+      value:  "{{ item.instances[0].public_ip_address }}"
+      overwrite: true
+    loop: "{{ ec2_info.results }}"
+    when: item.item == "frontend"
