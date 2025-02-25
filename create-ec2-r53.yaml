@@ -1,12 +1,13 @@
 - name: create ec2 and route53 records
   connection: local
   hosts: local
+  gather_facts: no
   vars: 
     subnet_id: subnet-0fe8b4d2cdb77fa31
     sg_id: sg-02a7fcef21938c05b
     ami_id: ami-09c813fb71547fc4f
     instance_type: t3.micro
-    zone: lokeshportfo.site
+    zone: "lokeshportfo.site"
     instances:
     - mysql
     - backend
@@ -25,7 +26,7 @@
     amazon.aws.ec2_instance:
       name: "{{ item }}"
       subnet_id: "{{ subnet_id }}"
-      security_group: "{{ sg_id }}"
+      security_group: ["{{ sg_id }}"]
       image_id: "{{ ami_id }}"
       instance_type: "{{ instance_type }}"
     loop: "{{ instances }}"
@@ -40,14 +41,14 @@
       msg: "{{ item.item }} : {{ item.instances[0].private_ip_address }}"
     loop: "{{ ec2_info.results }}"
 
-  - name: create private ip r53 records
+  - name: create or overwrite private ip r53 records
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
-      record: "{{ item.item }} . {{ zone }}"
+      record: "{{ item.item }}.{{ zone }}"
       type: A
       ttl: 1
       value:  "{{ item.instances[0].private_ip_address }}"
-      wait: true
       overwrite: true
     loop: "{{ ec2_info.results }}"
+    when: item.instances | length > 0
