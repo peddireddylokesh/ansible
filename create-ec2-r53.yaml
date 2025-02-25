@@ -12,7 +12,6 @@
     - mysql
     - backend
     - frontend
-
   tasks:
   - name:  installing aws python libraries
     ansible.builtin.pip:
@@ -21,7 +20,6 @@
     loop: 
     - boto3
     - botocore
-
   - name: create ec2 instances
     amazon.aws.ec2_instance:
       name: "{{ item }}"
@@ -49,9 +47,10 @@
       type: A
       ttl: 1
       value:  "{{ item.instances[0].private_ip_address }}"
+      wait: true
       overwrite: true
     loop: "{{ ec2_info.results }}"
-    when: item.instances | length > 0
+    
 
   - name: create public ip for frontend  
     amazon.aws.route53:
