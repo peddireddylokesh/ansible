@@ -1,14 +1,8 @@
-- name: install and run niginx
-  hosts: web
+- name: installing niginx
+  hosts: all
   become: yes # -b "become is used to run the task as root user"
   tasks:
   - name: install nginx
     ansible.builtin.package:
      name: nginx
      state: present
-  - name: start niginx 
-    ansible.builtin.service:
-     name: nginx
-     state: started
-     enabled: yes
-  
