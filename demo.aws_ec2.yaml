@@ -4,7 +4,7 @@ regions:
 
 filters:
   tag:Name: "nginx"  # Ensure correct tag filter
-  instance-state-name: "present"
+  instance-state-name: "running"
 
 hostnames:
   - private_ip_address  # Ensure Ansible uses private IPs for connection
