@@ -1,5 +1,5 @@
 - name: installing niginx
-  hosts: all
+  hosts: ungrouped
   become: yes # -b "become is used to run the task as root user"
   tasks:
   - name: install nginx
