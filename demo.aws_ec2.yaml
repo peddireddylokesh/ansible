@@ -2,8 +2,8 @@ plugin: amazon.aws.aws_ec2
 regions:
   - us-east-1
 filters: 
-  tag:name: nginx
-  instance-state-name : running
+  tag:name: "nginx"
+  instance-state-name : "running"
 hostnames:
   # you can also specify a list in order of presidence for hostname variables.
   - private_ip_address
