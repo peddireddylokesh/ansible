@@ -2,6 +2,7 @@
   hosts: aws_ec2
   become: yes # -b "become is used to run the task as root user"
   serial: 3
+  gather_facts: no
   tasks:
   - name: install nginx
     ansible.builtin.package:
