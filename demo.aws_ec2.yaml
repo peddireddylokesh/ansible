@@ -3,11 +3,11 @@ regions:
   - us-east-1
 
 filters:
-  "tag:Name": "nginx"  # Ensure correct key format (case-sensitive)
+  "tag:Name": "nginx"  # Ensure correct tag filter
   instance-state-name: "running"
 
 hostnames:
-  - private_ip_address
+  - private_ip_address  # Ensure Ansible uses private IPs for connection
 
 compose:
-  ansible_host: private_ip_address
+  ansible_host: private_ip_address  # Explicitly set the ansible_host variable
