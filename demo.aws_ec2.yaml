@@ -1,14 +1,9 @@
 plugin: amazon.aws.aws_ec2
 regions:
-  - us-east-1
-
+  - us-east-1  # Change as needed
 filters:
-  tag:Name: "nginx"  # Ensure correct tag filter
-  instance-state-name: "running"
-
+  instance-state-name: running
 hostnames:
-  - private_ip_address  # Ensure Ansible uses private IPs for connection
-
+  - private-ip-address  # Ensure this is correct
 compose:
-  ansible_host: private_ip_address # Explicitly set the ansible_host variable
-  ansible_ssh_host: private_ip_address  # Forces SSH to use the correct IP
+  ansible_host: private-ip-address  # Ensures correct SSH connectivity
