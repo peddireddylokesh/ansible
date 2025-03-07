@@ -3,11 +3,15 @@ regions:
   - us-east-1
 
 filters:
-  "tag:Name": "nginx"  # Ensure correct tag filter
+  "tag:Name": "nginx"
   instance-state-name: "running"
 
 hostnames:
-  - private_ip_address  # Ensure Ansible uses private IPs for connection
+  - private_ip_address
 
 compose:
-  ansible_host: private_ip_address  # Explicitly set the ansible_host variable
+  ansible_host: private_ip_address
+
+vars:
+  ansible_user: ec2-user
+  ansible_ssh_private_key_file: /path/to/suresh.pem
