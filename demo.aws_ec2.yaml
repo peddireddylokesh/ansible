@@ -2,7 +2,13 @@ plugin: amazon.aws.aws_ec2
 regions:
   - us-east-1  # Change as needed
 filters:
+  tag:Name: "nginx"  # Ensure correct tag filtering
   instance-state-name: running
+
+keyed_groups:
+  - key: tags.Name
+    prefix: "nginx"
+    
 hostnames:
   - private-ip-address  # Ensure this is correct
 compose:

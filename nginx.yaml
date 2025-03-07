@@ -1,5 +1,5 @@
 - name: installing niginx
-  hosts: nginx
+  hosts: aws_ec2
   become: yes # -b "become is used to run the task as root user"
   tasks:
   - name: install nginx
