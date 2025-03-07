@@ -1,12 +1,13 @@
 plugin: amazon.aws.aws_ec2
 regions:
   - us-east-1
-filters: 
-  tag:Name: "nginx"
-  instance-state-name : "running"
+
+filters:
+  "tag:Name": "nginx"  # Ensure correct key format (case-sensitive)
+  instance-state-name: "running"
+
 hostnames:
-  # you can also specify a list in order of presidence for hostname variables.
   - private_ip_address
-compose: 
-  # this sets the `ansible_host` host variable to connect with the private IP address without changing the hostname.
+
+compose:
   ansible_host: private_ip_address
