@@ -4,11 +4,6 @@ regions:
 filters:
   tag:Name: "nginx"  # Ensure correct tag filtering
   instance-state-name: running
-
-keyed_groups:
-  - key: tags.Name
-    prefix: "nginx"
-    
 hostnames:
   - private-ip-address  # Ensure this is correct
 compose:
