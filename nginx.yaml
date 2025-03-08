@@ -1,8 +1,8 @@
 - name: installing niginx
-  hosts: aws_ec2
-  # hosts: web
+  # hosts: aws_ec2
+  hosts: web
   become: yes # -b "become is used to run the task as root user"
-  serial: 3
+  serial: 10
   gather_facts: no
   tasks:
   - name: install nginx
