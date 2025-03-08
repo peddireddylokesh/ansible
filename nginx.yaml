@@ -1,6 +1,6 @@
 - name: installing niginx
   #hosts: aws_ec2
-  hosts: web
+  hosts: all
   become: yes # -b "become is used to run the task as root user"
   serial: 3
   gather_facts: no
