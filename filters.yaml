@@ -60,13 +60,13 @@
     loop: "{{ range(50,100) | list }}"
 
 
-  - name: check ip address is valid or not
-    vars: 
-      ip: "456.54.542.676"
-    ansible.builtin.debug:
-      msg: "{{ ip | ansible.utils.ipaddr }}"
-  - name: check ip address is valid or not
-    vars: 
-      ip: "198.168.0.1"
-    ansible.builtin.debug:
-      msg: "{{ ip | ansible.utils.ipaddr }}"
+  # - name: check ip address is valid or not
+  #   vars: 
+  #     ip: "456.54.542.676"
+  #   ansible.builtin.debug:
+  #     msg: "{{ ip | ansible.utils.ipaddr }}"
+  # - name: check ip address is valid or not
+  #   vars: 
+  #     ip: "198.168.0.1"
+  #   ansible.builtin.debug:
+  #     msg: "{{ ip | ansible.utils.ipaddr }}"
