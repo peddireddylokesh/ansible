@@ -53,6 +53,12 @@
       msg: "min is {{ numbers | min }} max is {{ numbers | max }}"
     vars:
       numbers: "{{ range(1,21) | list }}"
+  
+  - name: printing some range numbers
+    ansible.builtin.debug:
+      msg: "{{item}}"
+    loop: "{{ range(50,100) | list }}"
+
 
   - name: check ip address is valid or not
     vars: 
