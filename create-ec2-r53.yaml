@@ -3,9 +3,9 @@
   hosts: local
   gather_facts: no
   vars: 
-    subnet_id: subnet-0fe8b4d2cdb77fa31
-    sg_id: sg-02a7fcef21938c05b
-    ami_id: ami-09c813fb71547fc4f
+    subnet_id: subnet-025244d176696a6d1
+    sg_id: sg-0f5cb50c21dd27095
+    ami_id: ami-08b5b3a93ed654d19
     instance_type: t3.micro
     zone: "lokeshportfo.site"
     instances:
